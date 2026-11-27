@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom'
+// import { BrowserRouter, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom'
 import { site } from './config/siteConfig'
 import Home from './home/Home'
 import HomePage from './home/HomePage'
@@ -56,7 +57,7 @@ export default function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         {/* Home = layout (Header + page + Footer). Each page renders inside it. */}
@@ -92,6 +93,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }

@@ -1,12 +1,9 @@
-# Dependencies
+
 node_modules/
-
-# Build files
 dist/
+.DS_Store
 
-# Environment variables
+# Environment files
 .env
 .env.*
-
-# OS files
-.DS_Store
+!.env.example
